@@ -1,20 +1,18 @@
-@import './app/vendor/semantic.min.css';
+@import './app/vendor/foundation.min.css';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);
 
-.ui.menu .item img.logo {
-    margin-right: 1.5em;
+body, html, h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
 }
 
-form.ui.segment.form {
-  background-color: #F1F9FF;
-  margin-top: 2em;
+.header {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-form.form:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.top-bar {
+  margin-bottom: 80px;
 }
 
 .votes {
@@ -26,24 +24,45 @@ form.form:after {
   border-radius: 5px;
 }
 
-.ui.grid.posts {
-  margin-top: 2em;
+.value {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .meta {
   color: #9A9A9A
 }
 
-.ui.grid>.row>.column.votes {
-  display: flex;
+.title {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-ul.ui.list li:before {
+.vote-btn .button {
+  padding-left: 30px;
+  position: relative;
+}
+
+.arrow::after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 6px;
   content: '';
+  left: 10px;
+  margin-top: -2px;
+  position: absolute;
+  top: 50%;
 }
 
-.voters {
-  clear: both;
-  width: 100%;
+.arrow.up::after {
+  border-top-width: 0;
+  border-bottom-style: solid;
+  border-color: transparent transparent #FFF;
 }
 
+.arrow.down::after {
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-color: #FFF transparent transparent;
+}
