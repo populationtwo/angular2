@@ -1,3 +1,12 @@
 <div class="inventory-app">
-  {{product.name}}
+  <!--{{product.name}}-->
+
+  <!--<div *ngFor="let item of products" (click)=productWasSelected(item)>-->
+  <!--{{item.name}}-->
+  <!--</div>-->
+
+  <products-list [productList]="products" (onProductSelected)="productWasSelected($event)">
+
+  </products-list>
+
 </div>

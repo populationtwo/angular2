@@ -1,14 +1,7 @@
-import {Component} from '@angular/core';
+import {Component } from '@angular/core';
+import { Product } from './product.model';
 
-class Product {
-  constructor(public sku: string,
-              public name: string,
-              public imageUrl: string,
-              public department: string[],
-              public price: number) {
 
-  }
-}
 
 @Component({
   selector: 'app-root',
@@ -18,11 +11,11 @@ class Product {
 export class AppComponent {
   title = 'app works!';
 
-  product: Product[];
+  products: Product[];
 
   constructor() {
 
-    this.product = [
+    this.products = [
       new Product(
         'MYSHOES',
         'Black Running Shoes',
@@ -44,5 +37,8 @@ export class AppComponent {
     ]
   }
 
+  productWasSelected(product: Product): void {
+    console.log('Product selected:', product)
+  }
 
 }
